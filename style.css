@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/* Customizing the header */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px; /*top-bottom and left-right*/
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(126, 94, 8);
+    height: 100px;
+    width: 93.4%;
+    /* making  the header sticky */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif ;
+    color:black;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    transition: 0.3s ease; /*This is to make the changes happen smoothly when I move from one link to another*/
+}
+
+/* Customizing the links */
+a:link{
+    color: rgb(126, 94, 8);
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(54, 32, 3);
+}
+
+/* Psuedo class */
+#navbar li a.active::after,
+#navbar li a:hover::after{
+ content: "";
+ width: 30%;
+ height: 2px;
+ background:rgb(54, 32, 3);
+ position: absolute;
+ bottom: -4px;
+ left: 20px;
+}
+
+a:visited{
+    color: rgb(126, 94, 8);
+}
+
+/* Customizing the home page */
+h1{
+    font-size: 100px;
+    color: rgb(54, 32, 3);
+}
+
+h3{
+    font-size: 20px;
+    color: rgb(54, 32, 3);
+}
+
+div.row1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.col-2-3{
+    background-image: url("images/introPage.jfif");
+    background-size: cover;
+    height: 90vh;
+    background-position: top 0% left 0%;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 0;
+}
+.col-1-4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 30px;
+    background: linear-gradient(45deg, #6c543a,#ccbcad ); /*refer pg 298 in textbook*/
+}
+
+/* Styling the footer */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer .follow i{
+    color: rgb(126, 94, 8);
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: rgb(54, 32, 3);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    color: rgb(126, 94, 8);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info2{
+    margin-top: -30px;
+}
+
+.icon {
+    margin-top: -30px;
+}

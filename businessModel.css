@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/* Customizing the header */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px; /*top-bottom and left-right*/
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(102, 170, 102);
+    height: 100px;
+    width: 93.4%;
+    /* making  the header sticky */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif ;
+    color:black;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    transition: 0.3s ease; /*This is to make the changes happen smoothly when I move from one link to another*/
+}
+
+/* Customizing the links */
+a:link{
+    color: rgb(1, 34, 1);
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color:rgb(102, 170, 102);
+}
+
+/* Psuedo class */
+#navbar li a.active::after,
+#navbar li a:hover::after{
+ content: "";
+ width: 30%;
+ height: 2px;
+ background:rgb(102, 170, 102);
+ position: absolute;
+ bottom: -4px;
+ left: 20px;
+}
+
+a:visited{
+    color: rgb(1, 34, 1);
+}
+
+/* Customizing the home page */
+h1{
+    font-size: 35px;
+    color: rgb(2, 56, 2);
+}
+
+h2{
+    font-size: 20px;
+    color: rgb(102, 170, 102);
+}
+
+
+/* Styling the course offered according to the age */
+#name{
+    text-align: center;
+    font-family:monospace;
+    font-size: 100px;
+}
+
+#summary{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width:100%;
+}
+
+.pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.category{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border:  double;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(195, 235, 195, 0.2);
+    transition: 0.2s ease;
+   
+}
+
+.category:hover{
+    box-shadow: 20px 20px 40px rgba(186, 112, 235, 0.6); 
+}
+
+.category img{
+    width: 100%;
+    border-radius: 1px solid rgb(184, 226, 184);
+}
+
+/* Styling the features of the business plan */
+#feature{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fe-box img{
+    width: 150px;
+}
+
+#feature .fe-box{
+  width: 150px;
+  text-align: center;
+  padding: 25px 15px;
+  border: 1px solid rgb(8, 8, 8);
+  border-radius: 4px;
+  box-shadow: 20px 20px 34px rgba(189, 241, 189, 0.2);
+  margin: 15px 0;
+}
+
+#feature .fe-box:hover{
+    box-shadow: 20px 20px 40px rgba(214, 173, 241, 0.6); 
+}
+
+#feature .fe-box h3{
+    padding: 9px 8px 6px 8px;
+    font-family: monospace;
+    background-color: rgb(238, 189, 238);
+    opacity: 0.6;
+}
+
+#feature .fe-box:nth-child(2) h3{
+  background-color: rgb(240, 240, 154);
+}
+
+#feature .fe-box:nth-child(3) h3{
+    background-color: rgb(62, 194, 62)
+}
+
+#feature .fe-box:nth-child(4) h3{
+    background-color: rgb(124, 124, 212)
+}
+
+#feature .fe-box:nth-child(5) h3{
+    background-color: rgb(81, 212, 230)
+}
+
+#feature .fe-box:nth-child(6) h3{
+    background-color: rgb(132, 204, 65)
+}
+
+
+/* Styling the footer */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #EAE7FA,#838BC2 )
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer .follow i{
+    color: #715C8C; 
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: rgb(54, 32, 3);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    color: rgb(126, 94, 8);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info2{
+    margin-top: -30px;
+}
+
+.icon {
+    margin-top: -30px;
+}
